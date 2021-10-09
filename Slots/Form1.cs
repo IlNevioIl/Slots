@@ -14,11 +14,14 @@ namespace Slots
     {
         public Form1()
         {
+            //init
             InitializeComponent();
             string version = "v1.0.0";
             int money = 100;
+            //Converting int to string
             string moneyString = money.ToString();
 
+            //Setting the labels 
             labelAmmount.Text = moneyString;
             labelVersion.Text = version;
         }
