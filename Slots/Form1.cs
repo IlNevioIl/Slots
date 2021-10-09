@@ -16,7 +16,7 @@ namespace Slots
         {
             //init
             InitializeComponent();
-            string version = "v1.0.0";
+            string version = "v1.1.0";
             int money = 100;
             //Converting int to string
             string moneyString = money.ToString();
@@ -36,6 +36,7 @@ namespace Slots
             //Check if you have enough money
             if (moneyInt <= 0)
             {
+                MessageBox.Show("You dont have enough money", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -76,6 +77,7 @@ namespace Slots
                 string moneyString1New = moneyInt1New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString1New;
+                MessageBox.Show("You got +100", "Won!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (num == 2 && num2 == 2 && num3 == 2)
             {
@@ -89,6 +91,7 @@ namespace Slots
                 string moneyString2New = moneyInt2New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString2New;
+                MessageBox.Show("You got +100", "Won!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (num == 3 && num2 == 3 && num3 == 3)
             {
@@ -102,6 +105,7 @@ namespace Slots
                 string moneyString3New = moneyInt3New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString3New;
+                MessageBox.Show("You got +100", "Won!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
