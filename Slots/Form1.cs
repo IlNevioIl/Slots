@@ -73,7 +73,6 @@ namespace Slots
                 string moneyString1New = moneyInt1New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString1New;
-                Console.WriteLine("Won1");
             }
             else if (num == 2 && num2 == 2 && num3 == 2)
             {
@@ -87,7 +86,6 @@ namespace Slots
                 string moneyString2New = moneyInt2New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString2New;
-                Console.WriteLine("Won2");
             }
             else if (num == 3 && num2 == 3 && num3 == 3)
             {
@@ -101,11 +99,10 @@ namespace Slots
                 string moneyString3New = moneyInt3New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString3New;
-                Console.WriteLine("Won3");
             }
             else
             {
-                Console.WriteLine("Loose");
+                //Nothing because you lost
             }
         }
     }
