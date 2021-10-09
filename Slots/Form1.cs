@@ -25,19 +25,23 @@ namespace Slots
 
         private void spinButton_Click(object sender, EventArgs e)
         {
-            //Getting Money Ammount
+            //Getting MoneyAmmount String
             string moneyString = labelAmmount.Text.ToString();
+            //Converting String to int to do the math
             int moneyInt = Convert.ToInt32(moneyString);
 
+            //Check if you have enough money
             if (moneyInt <= 0)
             {
                 return;
             }
 
             //The fee (its 10)
-            int moneyNew = moneyInt - 10;
-            string moneyNewString = moneyNew.ToString();
-            labelAmmount.Text = moneyNewString;
+            int moneyWithFee = moneyInt - 10;
+            //Converting int to string
+            string moneyWithFeeString = moneyWithFee.ToString();
+            //Setting the label to the new ammount
+            labelAmmount.Text = moneyWithFeeString;
 
             //Getting 3 random numbers between 1 and 3
             Random random = new Random();
@@ -59,6 +63,7 @@ namespace Slots
             //Check if the 3 numbers are the same
             if (num == 1 && num2 == 1 && num3 == 1)
             {
+
                 Console.WriteLine("Won1");
             }
             else if (num == 2 && num2 == 2 && num3 == 2)
