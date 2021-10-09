@@ -63,15 +63,44 @@ namespace Slots
             //Check if the 3 numbers are the same
             if (num == 1 && num2 == 1 && num3 == 1)
             {
-
+                //Getting MoneyAmmount String
+                string moneyString1 = labelAmmount.Text.ToString();
+                //Converting String to int to do the math
+                int moneyInt1 = Convert.ToInt32(moneyString1);
+                //Setting the ammount +100
+                int moneyInt1New = moneyInt1 + 100;
+                //Converting money int to a string
+                string moneyString1New = moneyInt1New.ToString();
+                //Setting the money label to the string ammount
+                labelAmmount.Text = moneyString1New;
                 Console.WriteLine("Won1");
             }
             else if (num == 2 && num2 == 2 && num3 == 2)
             {
+                //Getting MoneyAmmount String
+                string moneyString2 = labelAmmount.Text.ToString();
+                //Converting String to int to do the math
+                int moneyInt2 = Convert.ToInt32(moneyString2);
+                //Setting the ammount +100
+                int moneyInt2New = moneyInt2 + 100;
+                //Converting money int to a string
+                string moneyString2New = moneyInt2New.ToString();
+                //Setting the money label to the string ammount
+                labelAmmount.Text = moneyString2New;
                 Console.WriteLine("Won2");
             }
             else if (num == 3 && num2 == 3 && num3 == 3)
             {
+                //Getting MoneyAmmount String
+                string moneyString3 = labelAmmount.Text.ToString();
+                //Converting String to int to do the math
+                int moneyInt3 = Convert.ToInt32(moneyString3);
+                //Setting the ammount +100
+                int moneyInt3New = moneyInt3 + 100;
+                //Converting money int to a string
+                string moneyString3New = moneyInt3New.ToString();
+                //Setting the money label to the string ammount
+                labelAmmount.Text = moneyString3New;
                 Console.WriteLine("Won3");
             }
             else
