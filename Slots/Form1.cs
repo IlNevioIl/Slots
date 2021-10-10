@@ -16,8 +16,8 @@ namespace Slots
         {
             //init
             InitializeComponent();
-            string version = "v1.1.0";
-            int money = 100;
+            string version = "v1.2.0";
+            int money = 1000;
             //Converting int to string
             string moneyString = money.ToString();
 
@@ -49,9 +49,63 @@ namespace Slots
 
             //Getting 3 random numbers between 1 and 3
             Random random = new Random();
-            int num = random.Next(1, 4);
-            int num2 = random.Next(1, 4);
-            int num3 = random.Next(1, 4);
+            int num = random.Next(1, 5);
+            int num2 = random.Next(1, 5);
+            int num3 = random.Next(1, 5);
+
+            //Changing the image (For slot1)
+            if(num == 1)
+            {
+                pictureBox1.Image = Properties.Resources.herz;
+            }
+            else if(num == 2)
+            {
+                pictureBox1.Image = Properties.Resources.karo;
+            }
+            else if(num == 3)
+            {
+                pictureBox1.Image = Properties.Resources.kreuz;
+            }
+            else if (num == 4)
+            {
+                pictureBox1.Image = Properties.Resources.pik;
+            }
+
+            //Changing the image (For slot2)
+            if (num2 == 1)
+            {
+                pictureBox2.Image = Properties.Resources.herz;
+            }
+            else if (num2 == 2)
+            {
+                pictureBox2.Image = Properties.Resources.karo;
+            }
+            else if (num2 == 3)
+            {
+                pictureBox2.Image = Properties.Resources.kreuz;
+            }
+            else if (num2 == 4)
+            {
+                pictureBox2.Image = Properties.Resources.pik;
+            }
+
+            //Changing the image (For slot3)
+            if (num3 == 1)
+            {
+                pictureBox3.Image = Properties.Resources.herz;
+            }
+            else if (num3 == 2)
+            {
+                pictureBox3.Image = Properties.Resources.karo;
+            }
+            else if (num3 == 3)
+            {
+                pictureBox3.Image = Properties.Resources.kreuz;
+            }
+            else if (num3 == 4)
+            {
+                pictureBox3.Image = Properties.Resources.pik;
+            }
 
             //Random Numbers to String for the Label
             string numString = num.ToString();
@@ -105,6 +159,20 @@ namespace Slots
                 string moneyString3New = moneyInt3New.ToString();
                 //Setting the money label to the string ammount
                 labelAmmount.Text = moneyString3New;
+                MessageBox.Show("You got +100", "Won!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (num == 4 && num2 == 4 && num3 == 4)
+            {
+                //Getting MoneyAmmount String
+                string moneyString4 = labelAmmount.Text.ToString();
+                //Converting String to int to do the math
+                int moneyInt4 = Convert.ToInt32(moneyString4);
+                //Setting the ammount +100
+                int moneyInt4New = moneyInt4 + 100;
+                //Converting money int to a string
+                string moneyString4New = moneyInt4New.ToString();
+                //Setting the money label to the string ammount
+                labelAmmount.Text = moneyString4New;
                 MessageBox.Show("You got +100", "Won!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
